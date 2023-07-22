@@ -1,0 +1,136 @@
+CRONJOB:
+
+Cronjob  is the most useful utility in linux or unix similar to all operating systems, that allows running commands and scripts on a given time or interval based.
+
+It is based on two types :
+> Time based 
+	It does the particular work at particular time given.
+>Interval based 
+	It doesnot have specific time it does it in inthe inervals that the task need to be done like every sunday or everyday at 5 etc.
+
+This is mostly used for automating jobs or taking backups, or cleaning system files.
+
+SYNTAX:
+
+*  *  *  *  *
+
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  day of week(0-6) 
+|  |  |  |  
+|  |  |  months(1-12)
+|  |  |   
+|  |  day of month(1-31)
+|  |
+|  hour(0-23)
+|
+min(0-59)
+
+
+' * ' when there are all stars that represents everytime in every minute.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+MANNUAL SETTING TO CHECK TIME IS RUNNING AT A CERTAIN TIME:
+
+mkdir cronjob
+cd cronjob
+touch script.sh
+nano script.sh
+
+date >> date.txt 
+(ctrl+o, enter, ctrl+x)
+
+bash script.sh
+cat script.sh
+	date >> date.txt
+cat date.txt
+	Fri Jul 21 06:06:35 PM IST 2023
+bash script.sh
+cat date.txt
+	Fri Jul 21 06:41:01 PM IST 2023
+	Fri Jul 21 06:42:01 PM IST 2023
+bash script.sh
+cat date.txt
+	Fri Jul 21 06:41:01 PM IST 2023
+	Fri Jul 21 06:42:01 PM IST 2023
+	Fri Jul 21 06:43:01 PM IST 2023
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+COMMANDS USED FOR CRONJOB:
+
+TO RUN CRONJOB:
+
+crontab -e
+
+TO DELETE CRONJOB:
+
+crontab -r
+
+TO GIVE PERMISSION:
+
+chmod 777 script.sh
+
+TO RUN DATA ONCE (MANNUALLY):
+
+bash file.sh
+
+TO START, RESTART & STOP THE CRONJOB:
+
+FOR START : sudo service cron start
+FOR RESTART: sudo service cron restart
+FOR STOP : sudo service cron stop
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+AUTOMATICALLY UPDATION USING CRONJOB:
+
+mkdir cron
+cd cron
+touch script.sh
+nano script.sh
+
+date >> date.txt 
+(ctrl+o, enter, ctrl+x)
+
+bash script.sh
+cat script.sh
+	date >> date.txt
+cat date.txt
+	Fri Jul 21 06:06:35 PM IST 2023
+crontab -e
+	crontab: installing new crontab
+chmod 777 script.sh
+sudo service cron start
+cd
+ls
+	cron  date.txt  javascript
+cat date.txt
+	Fri Jul 21 06:41:01 PM IST 2023
+cat date.txt
+	Fri Jul 21 06:41:01 PM IST 2023
+	Fri Jul 21 06:42:01 PM IST 2023
+cat date.txt
+	Fri Jul 21 06:41:01 PM IST 2023
+	Fri Jul 21 06:42:01 PM IST 2023
+	Fri Jul 21 06:43:01 PM IST 2023
+	Fri Jul 21 06:44:01 PM IST 2023
+	Fri Jul 21 06:45:01 PM IST 2023
+	Fri Jul 21 06:46:01 PM IST 2023
+	Fri Jul 21 06:47:01 PM IST 2023
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+TO CONVERT TIME IN IST:
+
+sudo timedatectl set-timezone Asia/Kolkata 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+PRACTICE THESE :
+
+1 "$(date +"%d-%m-%Y")"
+2 "$(date +%r)"
+
+----------------------------------------------------------------------------------------------------------------------------------------
