@@ -1,0 +1,30 @@
+CRONJOB:
+
+Cronjob  is the most useful utility in linux or unix similar to all operating systems, that allows running commands and scripts on a given time or interval based.
+
+It is based on two types :
+> Time based 
+	It does the particular work at particular time given.
+>Interval based 
+	It doesnot have specific time it does it in inthe inervals that the task need to be done like every sunday or everyday at 5 etc.
+
+This is mostly used for automating jobs or taking backups, or cleaning system files.
+
+SYNTAX:
+
+*  *  *  *  *
+
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  day of week(0-6) 
+|  |  |  |  
+|  |  |  months(1-12)
+|  |  |   
+|  |  day of month(1-31)
+|  |
+|  hour(0-23)
+|
+min(0-59)
+
+
+' * ' when there are all stars that represents everytime in every minute.

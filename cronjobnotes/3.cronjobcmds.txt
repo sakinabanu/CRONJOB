@@ -1,0 +1,23 @@
+COMMANDS USED FOR CRONJOB:
+
+TO RUN CRONJOB:
+
+crontab -e
+
+TO DELETE CRONJOB:
+
+crontab -r
+
+TO GIVE PERMISSION:
+
+chmod 777 script.sh
+
+TO RUN DATA ONCE (MANNUALLY):
+
+bash file.sh
+
+TO START, RESTART & STOP THE CRONJOB:
+
+FOR START : sudo service cron start
+FOR RESTART: sudo service cron restart
+FOR STOP : sudo service cron stop

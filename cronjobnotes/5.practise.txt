@@ -1,0 +1,4 @@
+PRACTICE THESE :
+
+1 "$(date +"%d-%m-%Y")"
+2 "$(date +%r)"

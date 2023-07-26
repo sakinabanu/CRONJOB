@@ -1,0 +1,24 @@
+MANNUAL SETTING TO CHECK TIME IS RUNNING AT A CERTAIN TIME:
+
+mkdir cronjob
+cd cronjob
+touch script.sh
+nano script.sh
+
+date >> date.txt 
+(ctrl+o, enter, ctrl+x)
+
+bash script.sh
+cat script.sh
+	date >> date.txt
+cat date.txt
+	Fri Jul 21 06:06:35 PM IST 2023
+bash script.sh
+cat date.txt
+	Fri Jul 21 06:41:01 PM IST 2023
+	Fri Jul 21 06:42:01 PM IST 2023
+bash script.sh
+cat date.txt
+	Fri Jul 21 06:41:01 PM IST 2023
+	Fri Jul 21 06:42:01 PM IST 2023
+	Fri Jul 21 06:43:01 PM IST 2023

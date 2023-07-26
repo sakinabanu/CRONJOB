@@ -1,0 +1,3 @@
+TO CONVERT TIME IN IST:
+
+sudo timedatectl set-timezone Asia/Kolkata 
